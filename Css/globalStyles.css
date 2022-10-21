@@ -1,0 +1,131 @@
+:root{
+    --primary-clr:#0F5278;
+    --primary-lignt:#F6FCFF;
+    --text-dark:#484848;
+    --text-dark2:#849097;
+    --text-light:#fff;
+    --border-primary: 5px solid var(--primary-clr);
+    --border-dark:2px solid var(--text-dark);
+    --border-dark2:2px solid var(--text-dark2);
+    --border-light:1px solid #e4f0f6;
+    --shadow:0px 0px 10px #e3e3e3;
+    --shadow2:0px 3px 6px #D3E5EF;
+    --font-size:1.6rem;
+    --font-head:2.6rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+html,body{
+    scroll-behavior: smooth;
+    font-size: 10px !important;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+p{
+    font-size: var(--font-size);
+    font-weight: 300;
+}
+.body_content{
+    line-height: 26px;
+    font-size: var(--font-size);
+    font-weight: 300;
+}
+.text-right{
+    text-align: right;
+}
+.text2{
+    font-size: 1.2rem;
+}
+.text3{
+    font-size: 1.4rem;
+    margin: 0;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+section{
+    padding: 100px 0;
+}
+ul{
+    list-style: none;
+    margin: 0;
+}
+.btn{
+    color: var(--primary-clr);
+    background-color: var(--text-light);
+    font-size: var(--font-size);
+    transition: 0.4s ease-in-out;
+}
+.btn:hover{
+    background-color:var(--primary-clr) ;
+    color: var(--text-light);
+}
+.mainBtn{
+    background-color:var(--primary-clr) ;
+    color: var(--text-light);
+    transition: 0.4s ease-in-out;
+}
+.mainBtn:hover{
+    background-color: #0e79b8;
+    color: var(--text-light);
+}
+.section-title{
+    font-size: var(--font-head);
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.my_row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+::selection{
+    background-color: var(--primary-clr);
+    color: var(--text-light);
+}
+@media only screen and (max-width:1200px){
+    
+    section{
+        padding: 50px 0;
+    }
+}
+@media only screen and (max-width:600px){
+    
+    html,body{
+        font-size: 8px !important;
+    }
+    section{
+        padding: 25px 0;
+    }
+}
+label{
+    color: var(--primary-clr);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.dataInput{
+    padding:6px;
+    width: 300px;
+    border: none;
+    outline: none;
+    background-color:#F4F5FA;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: var(--font-size);
+    color: var(--primary-clr);
+    font-weight: 500;
+}
+.inp-group{
+    margin: 12px 0;
+}

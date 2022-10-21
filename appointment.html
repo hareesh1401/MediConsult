@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi Consult | Appointment</title>
+    <!-- BOOTSTRAP STYLES -->
+    <link rel="stylesheet" href="./Css/bootstrap.css">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./Scripts/componentScript.js" defer></script>
+    <!--JQUERY CALENDER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- FONT AWSOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CUSTOME CSS STYLES -->
+    <link rel="stylesheet" href="./Css/globalStyles.css">
+    <link rel="stylesheet" href="./Css/component.css">
+    <link rel="stylesheet" href="./Css/appointment.css">
+</head>
+<body>
+    <!-- HEADER STARTS -->
+
+        <div class="header" data-aos="fade-down">
+            <div class="container my_row">
+                <a href="./home.html" class="logo">
+                    <img src="./Assets/logo.svg" alt="" class="logoIcon">
+                </a>
+                <nav class="Navigation">
+                    <ul>
+                        <li class="nav_links">
+                            <a href="./home.html" class="active" id="home">Home</a>
+                        </li>
+                        <li class="nav_links">
+                            <a href="./appointment.html">Appontment</a>
+                        </li>
+                        <li class="nav_links">
+                            <a href="./doctors.html">Doctors</a>
+                        </li>
+                        <li class="nav_links">
+                            <a href="./about.html">About</a>
+                        </li>
+                        <li class="nav_links">
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                        <li class="nav_links show">
+                            <a href="./patient-register.html">Register</a>
+                        </li>
+                    </ul>
+                    <i class="fa-solid fa-xmark navCloseBtn"></i>
+                </nav>
+                
+                <div class="headerSearchSection">
+                    <form action="" method="post" class="headerSearchWrapper" >
+                        <input type="text" placeholder="Search..." class="headerSearchInput">
+                        <button type="submit" class="headerSearchIcon">
+                            <img src="./Assets/Search.svg" alt="">
+                        </button>
+                    </form>
+                <div class="my_row">
+
+                    <button class="searchHeaderBtn" id="searchHeaderBtn">
+                        <img src="./Assets/Search.svg" alt="">
+                    </button>
+                    <a href="./patient-register.html" class="loginIcon">
+                        <img src="./Assets/account_icon.svg" alt="">
+                    </a>
+                    <button class="hamburger" id="hamburger">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="hamburgerIcon" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z" fill="#0F5278"/></svg>
+                    
+                    </button>
+                </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+        </div>
+        <a href="#" class="scrollTop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+        </a>
+    <!-- HEADER ENDS -->
+    <section class="banner text-center" id="appBanner">
+      <div class="container">
+        <div class="appointmentBanner">
+          <h1 class="section-title">
+            FIND A DOCTOR
+          </h1>
+          <P>Book appointments on the portal according to <br>
+            your schedule and the available timings of the doctors.
+            </P>
+            <form class="selectSection">
+        
+              <div class="custom-select-wrapper">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Choose Location" class="custom-select" readonly="readonly">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="selectIcon" width="8.373" height="10.466" viewBox="0 0 8.373 10.466">
+                    <path id="Path_9" data-name="Path 9" d="M8.186,2A4.191,4.191,0,0,0,4,6.186C4,7.89,5.237,9.3,6.546,10.8c.414.474.844.964,1.226,1.461a.523.523,0,0,0,.829,0c.382-.5.811-.986,1.226-1.461,1.31-1.5,2.546-2.912,2.546-4.615A4.191,4.191,0,0,0,8.186,2Zm0,5.756a1.57,1.57,0,1,1,1.57-1.57A1.57,1.57,0,0,1,8.186,7.756Z" transform="translate(-4 -2)" fill="#abadac"/>
+                  </svg>              
+                  <ul>
+                    <li>
+                      <span>Kollam</span>
+                    </li>
+                    <li>
+                      <span>Trivandrum</span>
+                    </li>
+                    <li>
+                      <span>Alapuzha</span>
+                    </li>
+                    <li>
+                      <span>Kottayam</span>
+                    </li>
+                    <li>
+                      <span>Idukki</span>
+                    </li>
+                  </ul>
+          
+                </div>
+          
+              </div>
+              <div class="custom-select-wrapper">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Select Doctor" class="custom-select" readonly="readonly">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="selectIcon" width="11.739" height="15.652" viewBox="0 0 11.739 15.652">
+                    <path id="Path_26" data-name="Path 26" d="M12.6,6.891h-.01l-.035-.007h-.007a2.944,2.944,0,0,0-.482-.037h-.734V6.114c0-.006,0-.01,0-.016a2,2,0,0,0,.918-1.463l.195-1.756a2.593,2.593,0,1,0-5.155,0l.195,1.756A2,2,0,0,0,8.405,6.1c0,.005,0,.01,0,.016v.734H7.668a2.916,2.916,0,0,0-.483.036H7.179l-.028.006H7.145A3.677,3.677,0,0,0,4,10.516V13.94a1.714,1.714,0,0,0,1.712,1.712h8.315a1.714,1.714,0,0,0,1.712-1.712V10.516A3.674,3.674,0,0,0,12.6,6.891ZM12.56,11.25a.734.734,0,1,1-.734.734A.734.734,0,0,1,12.56,11.25ZM7.778,2.826a2.1,2.1,0,1,1,4.183-.21,4.988,4.988,0,0,1-.924-.72.245.245,0,0,0-.3-.035A9.383,9.383,0,0,1,8.349,2.9c-.2.054-.38.095-.548.13Zm.077.693c.189-.039.39-.085.621-.146a9.8,9.8,0,0,0,2.356-1,5.2,5.2,0,0,0,1.092.777l-.087.781a8.832,8.832,0,0,1-1.968.225h0A8.818,8.818,0,0,1,7.9,3.932Zm.118,1.063-.015-.138a9.3,9.3,0,0,0,1.909.2h0a9.31,9.31,0,0,0,1.912-.2l-.015.138a1.509,1.509,0,0,1-.749,1.14l-.69.394a.923.923,0,0,1-.914,0l-.69-.394a1.509,1.509,0,0,1-.749-1.14ZM9.625,15.163H5.712A1.224,1.224,0,0,1,4.489,13.94V10.516A3.18,3.18,0,0,1,6.935,7.44V9.826a1.225,1.225,0,0,0-.978,1.2v1.938a.244.244,0,0,0,.245.245H6.69a.245.245,0,0,0,0-.489H6.446V11.024a.734.734,0,1,1,1.467,0v1.693H7.668a.245.245,0,0,0,0,.489h.489a.244.244,0,0,0,.245-.245V11.024a1.225,1.225,0,0,0-.978-1.2V7.346c.075-.006.156-.009.245-.009h.743a1.219,1.219,0,0,0,.274.673l.62.745a.729.729,0,0,0,.319.218ZM9.87,8.529a.242.242,0,0,1-.188-.088L9.061,7.7a.734.734,0,0,1-.17-.47V6.382l.278.159a1.415,1.415,0,0,0,1.4,0l.278-.159v.845a.735.735,0,0,1-.17.47l-.62.744A.242.242,0,0,1,9.87,8.529Zm5.38,5.411a1.224,1.224,0,0,1-1.223,1.223H10.114V8.972a.729.729,0,0,0,.319-.218l.62-.744a1.221,1.221,0,0,0,.274-.673h.743c.088,0,.169,0,.245.009v3.439a1.223,1.223,0,1,0,.489,0V7.44a3.179,3.179,0,0,1,2.446,3.076Z" transform="translate(-4 0)" fill="#abadac"/>
+                  </svg>
+                  <ul>
+                    <li>
+                      <span>Dr. Radha Krishnan</span>
+                    </li>
+                    <li>
+                      <span>Dr. Avinash Mathew</span>
+                    </li>
+                    <li>
+                      <span>Dr.Asha Thilakan</span>
+                    </li>
+                    <li>
+                      <span>Dr. Krishanadas</span>
+                    </li>
+                    <li>
+                      <span>Dr. Abraham </span>
+                    </li>
+                  </ul>
+                </div>
+          
+              </div>
+          
+              <div class="custom-select-wrapper">
+                <div class="input-wrapper">
+                  <input type="text" class="date" id="datepicker" placeholder="Choose Date" readonly="readonly"  />
+                  <!-- <input placeholder="Select your date" type="text" name="checkIn" id="datepicker" value="" class="calendar"> -->
+                  <!-- <input placeholder="Choose Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"  id="date"/> -->
+                  <svg id="selectbooktime" xmlns="http://www.w3.org/2000/svg" width="12.806" class="selectIcon" height="12.806" viewBox="0 0 12.806 12.806">
+                    <path id="Path_15" data-name="Path 15" d="M9.4,15.806a6.4,6.4,0,1,1,6.4-6.4A6.4,6.4,0,0,1,9.4,15.806Zm0-11.739A5.336,5.336,0,1,0,14.739,9.4,5.336,5.336,0,0,0,9.4,4.067Z" transform="translate(-3 -3)" fill="#abadac"/>
+                    <path id="Path_16" data-name="Path 16" d="M17.2,15.136A.534.534,0,0,1,16.844,15l-2.668-2.4A.534.534,0,0,1,14,12.2V9.534a.534.534,0,0,1,1.067,0v2.428L17.559,14.2a.534.534,0,0,1-.358.934Z" transform="translate(-8.13 -5.798)" fill="#abadac"/>
+                  </svg>
+                  
+                </div>
+          
+              </div>
+          <div class="selectBtn h-100">
+            <button type="submit" class="btn mainBtn w-100 h-100">Search</button>
+          </div>
+            </form>
+            <div class="appointmentBannerIcons">
+              <div class="appoIcon"><svg xmlns="http://www.w3.org/2000/svg" width="82" height="83" viewBox="0 0 82 83">
+                <g id="appoIcon1" transform="translate(-507 -436)">
+                  <rect id="Rectangle_104" data-name="Rectangle 104" width="82" height="83" rx="41" transform="translate(507 436)" fill="#f6fcff"/>
+                  <path id="Path_282" data-name="Path 282" d="M20.949,1.037A20.731,20.731,0,0,0,1.3,18.178a.7.7,0,0,0,1.382.26A19.33,19.33,0,1,1,25.051,40.76a.691.691,0,1,0,.26,1.339A20.7,20.7,0,0,0,22.893,1.037c-.656-.036-1.3-.023-1.944,0Zm.645,2.721a.691.691,0,0,0-.561.691V5.83a.691.691,0,1,0,1.382,0V4.449a.757.757,0,0,0-.819-.691ZM21.681,7.9a.691.691,0,0,0-.648.691V14.12a.691.691,0,0,0,1.382,0V8.594a.691.691,0,0,0-.689-.691h-.043Zm-5.872,8.938c-1.8,0-2.763,1.064-2.763,2.936v1.166h1.771V19.69c0-.835.365-1.166.951-1.166s.949.287.949,1.34c0,3.374-3.67,3.941-3.67,7.382v1.425h5.311v-1.64H14.9a1.256,1.256,0,0,1,0-.26c0-1.921,3.626-3.319,3.626-6.994,0-1.871-.915-2.936-2.719-2.936Zm6.778.13-3.324,7.945v1.64H22.8v2.115h1.814V26.555h.864V24.914h-.864V16.969h-2.03Zm.216,3.54v4.4H20.948Zm3.757.518a.694.694,0,0,0,.13,1.382h8.162a.691.691,0,1,0,0-1.382h-8.16a.691.691,0,0,0-.13,0Zm10.924,0a.694.694,0,0,0,.13,1.382h1.382a.691.691,0,1,0,0-1.382H37.613A.691.691,0,0,0,37.483,21.029ZM1.56,21.719a.691.691,0,0,0-.345.216q0,.022,0,.044a.691.691,0,0,0-.128.128q0,.022,0,.044a.691.691,0,0,0-.044.086q0,.021,0,.043A.691.691,0,0,0,1,22.453,20.343,20.343,0,0,0,20.9,42.4a.6.6,0,0,0,.735-.3q.022-.021.041-.043a.807.807,0,0,0,.044-.518v-6.52a.727.727,0,0,0-.13-.561q0-.022,0-.044h-.043q0-.021,0-.041a.617.617,0,0,0-.561-.217,7.042,7.042,0,0,1-4.275-1.209h-.043q0-.021,0-.043h-.087q0-.022,0-.044a.685.685,0,0,0-.949.3l-.043.044L14.6,35.191a14.733,14.733,0,0,1-6.3-6.3l2.03-1.078a.691.691,0,0,0,.345-.735q0-.021,0-.043a.691.691,0,0,0-.043-.087q0-.021,0-.043-.021-.022-.044-.043a.691.691,0,0,0-.041-.087q0-.021,0-.043a7.005,7.005,0,0,1-1.21-4.275.691.691,0,0,0-.774-.734H1.777a.692.692,0,0,0-.086,0,.691.691,0,0,0-.13,0ZM2.424,23.1h5.57a8.37,8.37,0,0,0,1.08,3.842l-2.03.993a.691.691,0,0,0-.173.13q-.022.02-.043.043a.691.691,0,0,0-.087.13q0,.021,0,.043a.691.691,0,0,0-.043.087q0,.021,0,.041a.691.691,0,0,0,0,.174q0,.021,0,.043a.691.691,0,0,0,0,.087q0,.021,0,.041a.691.691,0,0,0,.043.087c.006.012-.006.032,0,.044a.691.691,0,0,0,.13.173,16.117,16.117,0,0,0,7.514,7.512.691.691,0,0,0,.171.13c.012.006.032-.006.044,0a.691.691,0,0,0,.13.086h.041a.69.69,0,0,0,.087,0H14.9a.69.69,0,0,0,.087,0,.691.691,0,0,0,.087-.043h.041a.691.691,0,0,0,.174-.087h.043a.691.691,0,0,0,.13-.173q0-.021,0-.041.022-.021.043-.044l1.036-1.943a8.356,8.356,0,0,0,3.8,1.036v5.482A18.947,18.947,0,0,1,2.425,23.1Z" transform="translate(526.001 455.985)" fill="#0f5278"/>
+                </g>
+              </svg>
+              </div>
+              <div class="appoIcon"><svg xmlns="http://www.w3.org/2000/svg" width="83" height="83" viewBox="0 0 83 83">
+                <g id="appoIcon2" transform="translate(-642 -436)">
+                  <rect id="Rectangle_104" data-name="Rectangle 104" width="83" height="83" rx="41.5" transform="translate(642 436)" fill="#f6fcff"/>
+                  <path id="Path_277" data-name="Path 277" d="M20.672,2a3.66,3.66,0,0,0-2.358.857A3.521,3.521,0,0,0,17.3,6.4H14.07a.734.734,0,0,0-.734.734v.734h-4.4A2.943,2.943,0,0,0,6,10.8V41.614a2.943,2.943,0,0,0,2.934,2.934H32.409a2.943,2.943,0,0,0,2.934-2.934V10.8a2.943,2.943,0,0,0-2.934-2.934h-4.4V7.135a.734.734,0,0,0-.734-.734H24.042A3.521,3.521,0,0,0,23.03,2.857,3.664,3.664,0,0,0,20.672,2Zm0,1.464a2.2,2.2,0,0,1,1.906,3.3.734.734,0,0,0,.635,1.1h3.328v.613a.734.734,0,0,0,0,.241v2.694a.734.734,0,0,0,0,.241v.613H14.8v-.619a.734.734,0,0,0,0-.235v-2.7a.734.734,0,0,0,0-.235V7.869h3.328a.734.734,0,0,0,.635-1.1,2.2,2.2,0,0,1,1.906-3.3Zm0,1.467a.734.734,0,1,0,.734.734A.734.734,0,0,0,20.672,4.931ZM8.934,9.336h4.4V10.8h-2.2a2.213,2.213,0,0,0-2.2,2.2V39.413a2.213,2.213,0,0,0,2.2,2.2H30.209a2.213,2.213,0,0,0,2.2-2.2V13a2.213,2.213,0,0,0-2.2-2.2h-2.2V9.336h4.4A1.448,1.448,0,0,1,33.877,10.8V41.614a1.448,1.448,0,0,1-1.467,1.467H8.934a1.448,1.448,0,0,1-1.467-1.467V10.8A1.448,1.448,0,0,1,8.934,9.336Zm2.2,2.934h2.2V13a.734.734,0,0,0,.734.734h13.2A.734.734,0,0,0,28.008,13V12.27h2.2a.716.716,0,0,1,.734.734V39.413a.716.716,0,0,1-.734.734H11.135a.716.716,0,0,1-.734-.734V13A.716.716,0,0,1,11.135,12.27Zm1.4,4.4a.735.735,0,0,0,.073,1.467h1.445a.734.734,0,1,0,0-1.467H12.614A.734.734,0,0,0,12.539,16.672Zm4.4,0a.735.735,0,1,0,.073,1.467h7.317a.734.734,0,0,0,0-1.467H17.013a.733.733,0,0,0-.073,0Zm-4.4,4.4a.735.735,0,1,0,.073,1.467h1.445a.734.734,0,1,0,0-1.467H12.614A.734.734,0,0,0,12.539,21.073Zm4.4,0a.735.735,0,1,0,.073,1.467h7.317a.734.734,0,0,0,0-1.467H17.013a.733.733,0,0,0-.073,0Zm-4.4,4.4a.735.735,0,1,0,.073,1.467h1.445a.734.734,0,1,0,0-1.467H12.614A.733.733,0,0,0,12.539,25.475Zm4.4,0a.735.735,0,1,0,.073,1.467h7.317a.734.734,0,1,0,0-1.467H17.013a.733.733,0,0,0-.073,0Zm4.468,7.336a1.516,1.516,0,0,0-.983.4,3.6,3.6,0,0,0-.59.631,6.293,6.293,0,0,0-.534.836.734.734,0,0,0,1.3.678,5.129,5.129,0,0,1,.4-.631,2.4,2.4,0,0,1,.326-.354c.044.07.078.125.141.246a3.03,3.03,0,0,0,.4.646,1.269,1.269,0,0,0,2,0,3.109,3.109,0,0,0,.4-.647c.029-.059.04-.069.066-.116.026.047.037.059.066.116a3.03,3.03,0,0,0,.4.646,1.269,1.269,0,0,0,2,0,3.109,3.109,0,0,0,.4-.647c.065-.125.1-.18.144-.249a2.432,2.432,0,0,1,.34.361,5.049,5.049,0,0,1,.412.632.734.734,0,1,0,1.293-.69,6.58,6.58,0,0,0-.543-.836,3.632,3.632,0,0,0-.6-.628,1.522,1.522,0,0,0-.983-.393,1.343,1.343,0,0,0-.986.5,3.237,3.237,0,0,0-.384.632c-.043.082-.062.106-.1.167-.035-.06-.054-.084-.1-.167a3.311,3.311,0,0,0-.384-.632,1.224,1.224,0,0,0-1.972,0,3.237,3.237,0,0,0-.384.632c-.043.082-.062.106-.1.167-.035-.06-.054-.084-.1-.167a3.311,3.311,0,0,0-.384-.632,1.34,1.34,0,0,0-.986-.5Zm-1.53,4.4a.735.735,0,1,0,.073,1.467h8.8a.734.734,0,1,0,0-1.467h-8.8A.733.733,0,0,0,19.875,37.213Z" transform="translate(662.328 454.226)" fill="#0f5278"/>
+                </g>
+              </svg>
+              </div>
+              <div class="appoIcon"><svg xmlns="http://www.w3.org/2000/svg" width="82" height="83" viewBox="0 0 82 83">
+                <g id="appoIcon3" transform="translate(-778 -436)">
+                  <rect id="Rectangle_104" data-name="Rectangle 104" width="82" height="83" rx="41" transform="translate(778 436)" fill="#f6fcff"/>
+                  <path id="Path_283" data-name="Path 283" d="M48.168,21.962l.086-.521H50.5a1.742,1.742,0,1,0,0-3.484H46.777a1.736,1.736,0,0,0-1.718,1.457L44.32,23.87a1.74,1.74,0,0,0,2.509,1.837l.053-.025a2.415,2.415,0,0,1,1.221-.237,1.292,1.292,0,1,1-1,2.107,1.742,1.742,0,1,0-2.7,2.2,4.758,4.758,0,0,0,3.7,1.762h.1a4.79,4.79,0,0,0,4.672-4.523,4.736,4.736,0,0,0-1.306-3.539,4.8,4.8,0,0,0-3.4-1.488Zm3.546,4.967a3.625,3.625,0,0,1-3.534,3.422H48.1a3.6,3.6,0,0,1-2.8-1.333.581.581,0,0,1,.9-.733,2.453,2.453,0,1,0,1.9-4,3.524,3.524,0,0,0-1.7.339c-.056.025-.091.043-.1.05a.579.579,0,0,1-.835-.613L46.2,19.6a.579.579,0,0,1,.573-.486H50.5a.581.581,0,0,1,0,1.161H47.762a.581.581,0,0,0-.573.486l-.282,1.7a.581.581,0,0,0,.618.674q.289-.022.579-.021a3.63,3.63,0,0,1,2.621,1.126A3.586,3.586,0,0,1,51.713,26.929ZM58.39,2.653H55.907V1.766A1.768,1.768,0,0,0,54.142,0h-.267a1.768,1.768,0,0,0-1.766,1.766v.888H45.361V1.766A1.768,1.768,0,0,0,43.595,0h-.267a1.768,1.768,0,0,0-1.766,1.766v.888H34.814V1.766A1.768,1.768,0,0,0,33.048,0h-.267a1.768,1.768,0,0,0-1.766,1.766v.888H28.533a2.91,2.91,0,0,0-2.907,2.907V36.736a2.906,2.906,0,0,0,2.9,2.9H58.394a2.906,2.906,0,0,0,2.9-2.9V5.561A2.91,2.91,0,0,0,58.39,2.653Zm-5.119-.888a.605.605,0,0,1,.6-.6h.267a.605.605,0,0,1,.6.6v.888H53.271Zm-10.547,0a.605.605,0,0,1,.6-.6h.267a.605.605,0,0,1,.6.6v.888H42.724Zm-10.547,0a.605.605,0,0,1,.6-.6h.267a.605.605,0,0,1,.6.6v.888H32.177Zm27.959,9.186H55.17a.581.581,0,1,0,0,1.161h4.966V36.736a1.744,1.744,0,0,1-1.742,1.742H28.529a1.744,1.744,0,0,1-1.742-1.742V12.113h26.06a.581.581,0,0,0,0-1.161H26.787V5.561a1.748,1.748,0,0,1,1.746-1.746h2.483V5.522a1.768,1.768,0,0,0,1.766,1.766.581.581,0,0,0,0-1.161.605.605,0,0,1-.6-.6V3.815h9.385V5.522a1.768,1.768,0,0,0,1.766,1.766.581.581,0,1,0,0-1.161.605.605,0,0,1-.6-.6V3.815h9.386V5.522a1.768,1.768,0,0,0,1.766,1.766.581.581,0,1,0,0-1.161.605.605,0,0,1-.6-.6V3.815H58.39a1.748,1.748,0,0,1,1.746,1.746ZM41.24,28.007,39.546,28c.463-.658,1-1.417,1.592-2.269a8.142,8.142,0,0,0,1.324-2.759c.013-.057.024-.115.031-.173l.049-.384a1.747,1.747,0,0,0,.014-.221,4.281,4.281,0,0,0-8.48-.828,1.742,1.742,0,0,0,3.419.671.8.8,0,0,1,1.574.076l-.018.142a5.019,5.019,0,0,1-.767,1.476l-.433.618a.581.581,0,0,0,.951.667l.433-.619a6.026,6.026,0,0,0,.949-1.888.584.584,0,0,0,.013-.069l.03-.236a.58.58,0,0,0,0-.1,1.958,1.958,0,0,0-3.876-.291.581.581,0,0,1-1.14-.224,3.119,3.119,0,0,1,6.179.6.586.586,0,0,1,0,.074l-.049.384a.583.583,0,0,1-.01.058,7.009,7.009,0,0,1-1.144,2.355q-1.113,1.591-2.231,3.178a.581.581,0,0,0,.473.915l2.809.009a.581.581,0,1,1,0,1.161l-5.055-.016a.581.581,0,0,1-.457-.937c.031-.041.521-.718,1.776-2.5a.581.581,0,1,0-.949-.669c-1.3,1.842-1.726,2.431-1.755,2.47a1.742,1.742,0,0,0,1.381,2.8l5.06.016a1.742,1.742,0,1,0,.005-3.484Z" transform="translate(775.374 458)" fill="#0f5278"/>
+                </g>
+              </svg></div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section id="appBodyContaiener">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+           <h1>Doctors List</h1> <hr>
+            <br><br>
+            <div class="card w-100">
+              <div class="row">
+                <div class="card-img">
+                  <img src="./Assets/doc_ (3).png" alt="" class="cardImg">
+                </div>
+                <div class="card-body">
+                  <div class="my_row">
+                    <h3 class="card-title fw-bold">Dr. Kalesh Cherian</h3>
+                    <h3 class="card-title fw-bold text-secondary"> ₹ 500</h3>
+
+                  </div>
+                  <h5 class="card-title text-secondary">Cardiologist</h5>
+                  <h6 class="card-title text-secondary">Matha Hospital Kollam-691601</h6>
+                  <br><br>
+                  <div class="my_row">
+                    <button class="btn mainBtn booking">Book Appointment</button>
+                    <span class="time text-secondary">9:00-5:00</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <br>
+            <div class="card w-100">
+              <div class="row">
+                <div class="card-img">
+                  <img src="./Assets/doc_ (4).png" alt="" class="cardImg">
+                </div>
+                <div class="card-body">
+                  <div class="my_row">
+                    <h3 class="card-title fw-bold">Dr. Kalesh Cherian</h3>
+                    <h3 class="card-title fw-bold text-secondary"> ₹ 500</h3>
+
+                  </div>
+                  <h5 class="card-title text-secondary">Cardiologist</h5>
+                  <h6 class="card-title text-secondary">Matha Hospital Kollam-691601</h6>
+                  <br><br>
+                  <div class="my_row">
+                    <button class="btn mainBtn booking">Book Appointment</button>
+                    <span class="time text-secondary">9:00-5:00</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <br>
+            <div class="card w-100">
+              <div class="row">
+                <div class="card-img">
+                  <img src="./Assets/doc_ (5).png" alt="" class="cardImg">
+                </div>
+                <div class="card-body">
+                  <div class="my_row">
+                    <h3 class="card-title fw-bold">Dr. Kalesh Cherian</h3>
+                    <h3 class="card-title fw-bold text-secondary"> ₹ 500</h3>
+
+                  </div>
+                  <h5 class="card-title text-secondary">Cardiologist</h5>
+                  <h6 class="card-title text-secondary">Matha Hospital Kollam-691601</h6>
+                  <br><br>
+                  <div class="my_row">
+                    <button class="btn mainBtn booking">Book Appointment</button>
+                    <span class="time text-secondary">9:00-5:00</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <br>
+            <div class="card w-100">
+              <div class="row">
+                <div class="card-img">
+                  <img src="./Assets/doc_ (6).png" alt="" class="cardImg">
+                </div>
+                <div class="card-body">
+                  <div class="my_row">
+                    <h3 class="card-title fw-bold">Dr. Kalesh Cherian</h3>
+                    <h3 class="card-title fw-bold text-secondary"> ₹ 500</h3>
+
+                  </div>
+                  <h5 class="card-title text-secondary">Cardiologist</h5>
+                  <h6 class="card-title text-secondary">Matha Hospital Kollam-691601</h6>
+                  <br><br>
+                  <div class="my_row">
+                    <button class="btn mainBtn booking">Book Appointment</button>
+                    <span class="time text-secondary">9:00-5:00</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <br>
+            <div class="card w-100">
+              <div class="row">
+                <div class="card-img">
+                  <img src="./Assets/doc_ (2).png" alt="" class="cardImg">
+                </div>
+                <div class="card-body">
+                  <div class="my_row">
+                    <h3 class="card-title fw-bold">Dr. Kalesh Cherian</h3>
+                    <h3 class="card-title fw-bold text-secondary"> ₹ 500</h3>
+
+                  </div>
+                  <h5 class="card-title text-secondary">Cardiologist</h5>
+                  <h6 class="card-title text-secondary">Matha Hospital Kollam-691601</h6>
+                  <br><br>
+                  <div class="my_row">
+                    <button class="btn mainBtn booking">Book Appointment</button>
+                    <span class="time text-secondary">9:00-5:00</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <br>
+            <div class="card w-100">
+              <div class="row">
+                <div class="card-img">
+                  <img src="./Assets/doc_ (1).png" alt="" class="cardImg">
+                </div>
+                <div class="card-body">
+                  <div class="my_row">
+                    <h3 class="card-title fw-bold">Dr. Kalesh Cherian</h3>
+                    <h3 class="card-title fw-bold text-secondary"> ₹ 500</h3>
+
+                  </div>
+                  <h5 class="card-title text-secondary">Cardiologist</h5>
+                  <h6 class="card-title text-secondary">Matha Hospital Kollam-691601</h6>
+                  <br><br>
+                  <div class="my_row">
+                    <button class="btn mainBtn booking">Book Appointment</button>
+                    <span class="time text-secondary">9:00-5:00</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <br>
+
+            <div class="card w-100">
+              <div class="row">
+                <div class="card-img">
+                  <img src="./Assets/doc_ (8).png" alt="" class="cardImg">
+                </div>
+                <div class="card-body">
+                  <div class="my_row">
+                    <h3 class="card-title fw-bold">Dr. Kalesh Cherian</h3>
+                    <h3 class="card-title fw-bold text-secondary"> ₹ 500</h3>
+
+                  </div>
+                  <h5 class="card-title text-secondary">Cardiologist</h5>
+                  <h6 class="card-title text-secondary">Matha Hospital Kollam-691601</h6>
+                  <br><br>
+                  <div class="my_row">
+                    <button class="btn mainBtn booking">Book Appointment</button>
+                    <span class="time text-secondary">9:00-5:00</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <br>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+            <h1>Location</h1> <hr><br><br>
+            <div class="card w-100 overflow-hidden">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15766.653332973468!2d76.58349845!3d8.910857199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1665996551280!5m2!1sen!2sin" class="w-100 map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <br><br>
+            <div class="card w-100 booking-process">
+              <h2 class="card-title text-center fw-bold mt-5">Booking Process</h2>
+              <p class="card-text text-center">
+                You can manage various doctors and their availability <br> 
+                    on various dates and times.
+              </p>
+              <div class="my_row bpSvg mb-5">
+                <div class="svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                    <g id="bp1" transform="translate(-841 -1160)">
+                      <circle id="Ellipse_18" data-name="Ellipse 18" cx="30" cy="30" r="30" transform="translate(841 1160)" fill="#0f5278"/>
+                      <text id="_1" data-name="1" transform="translate(867.5 1198.5)" fill="#fff" font-size="22" font-family="Segoe UI Variable Display"><tspan x="0" y="0">1</tspan></text>
+                    </g>
+                  </svg>
+                </div>
+                <div class="svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66" height="66" viewBox="0 0 66 66">
+                    <defs>
+                      <filter id="Ellipse_2" x="0" y="0" width="66" height="66" filterUnits="userSpaceOnUse">
+                        <feOffset dx="3" input="SourceAlpha"/>
+                        <feGaussianBlur stdDeviation="1" result="blur"/>
+                        <feFlood flood-opacity="0.031"/>
+                        <feComposite operator="in" in2="blur"/>
+                        <feComposite in="SourceGraphic"/>
+                      </filter>
+                    </defs>
+                    <g id="bp2" transform="translate(-999 -1158)">
+                      <g transform="matrix(1, 0, 0, 1, 999, 1158)" filter="url(#Ellipse_2)">
+                        <circle id="Ellipse_2-2" data-name="Ellipse 2" cx="30" cy="30" r="30" transform="translate(0 3)" fill="#0f5278"/>
+                      </g>
+                      <text id="_2" data-name="2" transform="translate(1021.5 1202.5)" fill="#f6fcff" font-size="28" font-family="Segoe UI Variable Display"><tspan x="0" y="0">2</tspan></text>
+                    </g>
+                  </svg>
+                </div>
+                <div class="svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                    <g id="bp3" transform="translate(-1157 -1160)">
+                      <g id="Path_279" data-name="Path 279" transform="translate(1157 1160)" fill="#f6fcff">
+                        <path d="M 30 59.75 C 25.98366928100586 59.75 22.08760070800781 58.96345138549805 18.42004013061523 57.41220092773438 C 14.87745952606201 55.913818359375 11.69583988189697 53.7686882019043 8.963569641113281 51.03643035888672 C 6.23130989074707 48.30416107177734 4.086180210113525 45.12253952026367 2.587800025939941 41.57995986938477 C 1.036550045013428 37.91239929199219 0.25 34.01633071899414 0.25 30 C 0.25 25.98366928100586 1.036550045013428 22.08760070800781 2.587800025939941 18.42004013061523 C 4.086180210113525 14.87745952606201 6.23130989074707 11.69583988189697 8.963569641113281 8.963569641113281 C 11.69583988189697 6.23130989074707 14.87745952606201 4.086180210113525 18.42004013061523 2.587800025939941 C 22.08760070800781 1.036550045013428 25.98366928100586 0.25 30 0.25 C 34.01633071899414 0.25 37.91239929199219 1.036550045013428 41.57995986938477 2.587800025939941 C 45.12253952026367 4.086180210113525 48.30416107177734 6.23130989074707 51.03643035888672 8.963569641113281 C 53.7686882019043 11.69583988189697 55.913818359375 14.87745952606201 57.41220092773438 18.42004013061523 C 58.96345138549805 22.08760070800781 59.75 25.98366928100586 59.75 30 C 59.75 34.01633071899414 58.96345138549805 37.91239929199219 57.41220092773438 41.57995986938477 C 55.913818359375 45.12253952026367 53.7686882019043 48.30416107177734 51.03643035888672 51.03643035888672 C 48.30416107177734 53.7686882019043 45.12253952026367 55.913818359375 41.57995986938477 57.41220092773438 C 37.91239929199219 58.96345138549805 34.01633071899414 59.75 30 59.75 Z" stroke="none"/>
+                        <path d="M 30 0.5 C 26.01731109619141 0.5 22.15401077270508 1.279911041259766 18.51742172241211 2.818050384521484 C 15.004638671875 4.303829193115234 11.84973907470703 6.430961608886719 9.140350341796875 9.140350341796875 C 6.430961608886719 11.84973907470703 4.303829193115234 15.004638671875 2.818050384521484 18.51742172241211 C 1.279911041259766 22.15401077270508 0.5 26.01731109619141 0.5 30 C 0.5 33.98268890380859 1.279911041259766 37.84598922729492 2.818050384521484 41.48258209228516 C 4.303829193115234 44.995361328125 6.430961608886719 48.15026092529297 9.140350341796875 50.85964965820312 C 11.84973907470703 53.56903839111328 15.004638671875 55.69617080688477 18.51742172241211 57.18194961547852 C 22.15401077270508 58.72008895874023 26.01731109619141 59.5 30 59.5 C 33.98268890380859 59.5 37.84598922729492 58.72008895874023 41.48258209228516 57.18194961547852 C 44.995361328125 55.69617080688477 48.15026092529297 53.56903839111328 50.85964965820312 50.85964965820312 C 53.56903839111328 48.15026092529297 55.69617080688477 44.995361328125 57.18194961547852 41.48258209228516 C 58.72008895874023 37.84598922729492 59.5 33.98268890380859 59.5 30 C 59.5 26.01731109619141 58.72008895874023 22.15401077270508 57.18194961547852 18.51742172241211 C 55.69617080688477 15.004638671875 53.56903839111328 11.84973907470703 50.85964965820312 9.140350341796875 C 48.15026092529297 6.430961608886719 44.995361328125 4.303829193115234 41.48258209228516 2.818050384521484 C 37.84598922729492 1.279911041259766 33.98268890380859 0.5 30 0.5 M 30 0 C 46.56853866577148 0 60 13.43146133422852 60 30 C 60 46.56853866577148 46.56853866577148 60 30 60 C 13.43146133422852 60 0 46.56853866577148 0 30 C 0 13.43146133422852 13.43146133422852 0 30 0 Z" stroke="none" fill="#a7c1d3"/>
+                      </g>
+                      <text id="_3" data-name="3" transform="translate(1179.5 1201.5)" fill="#0f5278" font-size="30" font-family="Segoe UI Variable Display"><tspan x="0" y="0">3</tspan></text>
+                    </g>
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER STARTS -->
+    <section id="footer">
+        <div class="container">
+            <div class="footer_flex row g-5 ">
+                <div class="col-xl-3 col-xs-6 col-sm-6 col-md-3- col-lg-3" id="Footer_main_link">
+                    <ul>
+                        <li><a href="./home.html">
+                            <img src="./Assets/logo_light.svg" alt="" class="logoIcon">
+                        </a></li>
+                        <li><a href="www.gmail.com">
+                            <svg id="mail_icon" xmlns="http://www.w3.org/2000/svg" class=" mx-1" width="14.273" height="10.195" viewBox="0 0 14.273 10.195">
+                                <path id="Path_57" data-name="Path 57" d="M14.744,16.2H3.529A1.529,1.529,0,0,1,2,14.666V7.529A1.529,1.529,0,0,1,3.529,6H14.744a1.529,1.529,0,0,1,1.529,1.529v7.137A1.529,1.529,0,0,1,14.744,16.2ZM3.529,7.02a.51.51,0,0,0-.51.51v7.137a.51.51,0,0,0,.51.51H14.744a.51.51,0,0,0,.51-.51V7.529a.51.51,0,0,0-.51-.51Z" transform="translate(-2 -6)" fill="#fff"/>
+                                <path id="Path_58" data-name="Path 58" d="M9.665,12.123a.51.51,0,0,1-.28-.087L3.267,7.958a.51.51,0,0,1,.561-.846L9.945,11.19a.51.51,0,0,1-.28.933Z" transform="translate(-2.528 -6.515)" fill="#fff"/>
+                                <path id="Path_59" data-name="Path 59" d="M15.509,12.113a.51.51,0,0,1-.285-.933L21.34,7.1a.51.51,0,0,1,.566.846l-6.117,4.078A.51.51,0,0,1,15.509,12.113Z" transform="translate(-8.372 -6.505)" fill="#fff"/>
+                              </svg>
+                            <span class="fs-4 text-light">mediconsult@gmail.com</span>
+                        </a></li>
+                        <li> <svg xmlns="http://www.w3.org/2000/svg" class=" mx-1" width="10.672" height="10.672" viewBox="0 0 10.672 10.672">
+                            <path id="phoneIcon" d="M10.48,9.246a2.517,2.517,0,0,1-2.542,1.417,8.107,8.107,0,0,1-3.67-1.518,12.087,12.087,0,0,1-3.8-4.529A3.8,3.8,0,0,1,.627.677,1.509,1.509,0,0,1,1.83,0c.731-.036.834.383,1.085,1.034.187.487.437.985.576,1.49.261.943-.652.982-.767,1.752-.071.486.517,1.138.783,1.484a7.189,7.189,0,0,0,1.855,1.71c.406.255,1.059.716,1.523.462.714-.391.647-1.6,1.646-1.188a16.072,16.072,0,0,1,1.512.78c.763.411.728.836.437,1.72h0" transform="translate(0)" fill="#fff" fill-rule="evenodd"/>
+                          </svg>
+                        <span class="fs-4">+91 984 601 234 5</span>
+                    </li>
+                        <li> <span class="fs-5 mb-3 d-block">Follow us</span>
+                            <div>
+                                <div class="d-inline-block">
+                                    <a href="www.facebook.com">
+                                        <svg id="facebook_icon" xmlns="http://www.w3.org/2000/svg" width="25.856" height="25.856" viewBox="0 0 25.856 25.856">
+                                            <path id="Path_60" data-name="Path 60" d="M24.136,11.166A12.928,12.928,0,1,0,37.064,24.094,12.943,12.943,0,0,0,24.136,11.166Zm0,24.581A11.653,11.653,0,1,1,35.789,24.094,11.666,11.666,0,0,1,24.136,35.747Z" transform="translate(-11.208 -11.166)" fill="#fff"/>
+                                            <path id="Path_61" data-name="Path 61" d="M60.9,36.3H57.931c-2.98.009-3.369,1.912-3.371,3.576a.192.192,0,0,0-.006.048V41.1h-2.04a.215.215,0,0,0-.224.2v2.881a.215.215,0,0,0,.224.2h2.04v6.322a.215.215,0,0,0,.224.2h2.977a.215.215,0,0,0,.224-.2V44.388H60.9a.215.215,0,0,0,.224-.2V41.3a.215.215,0,0,0-.224-.2H57.754V39.549H60.9a.215.215,0,0,0,.224-.2V36.509a.2.2,0,0,0-.065-.145A.234.234,0,0,0,60.9,36.3Z" transform="translate(-43.78 -30.681)" fill="#fff"/>
+                                        </svg>                                  
+                                    </a>
+                                </div>
+    
+                                <div class="d-inline-block mx-2">
+                                    <a href="www.twitter.com">
+                                        <svg id="twitter_icon" xmlns="http://www.w3.org/2000/svg" width="25.856" height="25.856" viewBox="0 0 25.856 25.856">
+                                            <path id="Path_62" data-name="Path 62" d="M24.136,11.166A12.928,12.928,0,1,0,37.064,24.094,12.943,12.943,0,0,0,24.136,11.166Zm0,24.581A11.653,11.653,0,1,1,35.789,24.094,11.666,11.666,0,0,1,24.136,35.747Z" transform="translate(-11.208 -11.166)" fill="#fff"/>
+                                            <path id="Path_63" data-name="Path 63" d="M50.1,45.055a2.809,2.809,0,0,0,1.344-1.588,4,4,0,0,1-1.908.653l-.02.011a3.081,3.081,0,0,0-5.26,2.831l-.015-.022s-3.3.189-6.412-3.215a3.141,3.141,0,0,0,.98,4.126,3.222,3.222,0,0,1-1.427-.378,3.3,3.3,0,0,0,2.492,3.06,3.134,3.134,0,0,1-1.375.034,3.072,3.072,0,0,0,2.854,2.2,6.327,6.327,0,0,1-4.5,1.255,8.231,8.231,0,0,0,5.5,1.358,8.437,8.437,0,0,0,7.22-5.174,7.617,7.617,0,0,0,.757-3.993,4.041,4.041,0,0,0,1.478-1.56c-.278.083-1.31.335-1.694.429Z" transform="translate(-31.403 -36.339)" fill="#fff"/>
+                                        </svg>                                  
+                                    </a>
+                                </div>
+                                <div class="d-inline-block">
+                                    <a href="www.instagram.com">
+                                        <svg id="insta_light" xmlns="http://www.w3.org/2000/svg" width="25.853" height="25.852" viewBox="0 0 25.853 25.852">
+                                            <path id="Path_64" data-name="Path 64" d="M38.094,19.856A12.924,12.924,0,1,0,41.881,29,12.865,12.865,0,0,0,38.094,19.856Zm-.708,17.571A11.931,11.931,0,1,1,40.871,29,11.9,11.9,0,0,1,37.386,37.427Z" transform="translate(-16.028 -16.07)" fill="#fff"/>
+                                            <path id="Path_65" data-name="Path 65" d="M182.557,178.416a4.18,4.18,0,1,0,4.18,4.18A4.185,4.185,0,0,0,182.557,178.416Zm0,7.494a3.314,3.314,0,1,1,3.314-3.314A3.31,3.31,0,0,1,182.557,185.91Z" transform="translate(-169.631 -169.67)" fill="#fff"/>
+                                            <path id="Path_66" data-name="Path 66" d="M144.938,136H138.1a3.1,3.1,0,0,0-3.1,3.051v6.835a2.96,2.96,0,0,0,3.1,2.882h6.835a2.953,2.953,0,0,0,3.1-2.882v-6.835A3.087,3.087,0,0,0,144.938,136Zm2.345,9.886a2.2,2.2,0,0,1-2.345,2.128H138.1a2.159,2.159,0,0,1-2.295-2.128v-6.835a2.3,2.3,0,0,1,2.295-2.3h6.835a2.341,2.341,0,0,1,2.345,2.3Z" transform="translate(-128.59 -129.539)" fill="#fff"/>
+                                            <path id="Path_67" data-name="Path 67" d="M320.272,167.921a.673.673,0,1,0,.673.673A.672.672,0,0,0,320.272,167.921Z" transform="translate(-303.244 -159.74)" fill="#fff"/>
+                                          </svg>                                                                        
+                                    </a>
+                        </div></li>
+                        <li>
+                            <a href="./adminlogin.html" class="adminLogInBtn">Admin Login</a>
+                        </li>
+                    </ul>                
+                </div>
+                <div class="col-xl-3 col-xs-6 col-sm-6 col-md-3- col-lg-3">
+                    <ul class="FooterLinks">
+                        <h2>Quick Links</h2>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./appointments.html">Appointments</a></li>
+                        <li><a href="./doctors.html">Doctors</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-xs-6 col-sm-6 col-md-3- col-lg-3">
+                    <ul class="FooterLinks">
+                        <h2>Doctors</h2>
+                        <li><a href="./doctorlogIn.html">Log In</a></li>
+                        <li><a href="./doctorregister">register</a></li>
+                        <li><a href="./doctorpatients.html">patients</a></li>
+                        <li><a href="./doctorprofile.html">profile</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-xs-6 col-sm-6 col-md-3- col-lg-3">
+                    <ul class="FooterLinks">
+                        <h2>Patient</h2>
+                        <li><a href="./userlogIn.html">Log In</a></li>
+                        <li><a href="./userregister">register</a></li>
+                        <li><a href="./userbooking.html">booking</a></li>
+                        <li><a href="./userreview.html">review</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <div class="footerCopyright text-center ">
+        <p class="mb-0 py-2">© 2022. All rights reserved.</p>
+    </div>
+    <!-- FOOTER ENDS -->
+</body>
+</html>

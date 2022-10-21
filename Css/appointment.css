@@ -1,0 +1,170 @@
+body{
+    background-color: var(--primary-lignt);
+}
+.appointmentBanner{
+    width: 100%;
+    background: url(../Assets/appointmentBanner.svg) 
+                no-repeat center/cover;
+    height: 500px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.appointmentBanner h1{
+    font-weight: 800;
+    color: var(--text-light);
+
+}
+.appointmentBanner p{
+    color: var(--text-light);
+    opacity: .5;
+    text-align: center;
+
+}
+.appointmentBannerIcons{
+    display: flex;
+    gap:20px;
+    margin-top: 24px;
+}
+.appointmentBannerIcons div{
+    cursor: pointer;
+}
+/* APPOINTMENT BANNER RESPONSIVE STARTS */
+
+@media only screen and (max-width:480px){
+    .appointmentBanner{
+        height: 180px !important; 
+        margin-top: 3rem;
+    }
+    .appointmentBannerIcons{
+        display: flex;
+        gap:20px;
+        margin-top: 2rem;
+    }
+    .appointmentBannerIcons div svg{
+        width: 30px;
+        height: 30px;
+    }
+    
+}
+
+@media only screen and (max-width:770px){
+
+    .appointmentBanner{
+        height: 250px !important; 
+        margin-top: 2rem;
+    } 
+    .appointmentBanner h1{
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 6px;
+    }
+    .appointmentBanner p{
+        font-size: 1.2rem;
+        color: var(--text-light);
+    
+    }
+    .appointmentBannerIcons div svg{
+        width: 50px;
+        height: 50px;
+    }
+    .appointmentBanner h1{
+        font-weight: 600;
+        font-size: inherit;
+        margin-bottom: 3px;
+    }
+    .appointmentBanner p{
+        
+        font-size: inherit;
+        margin-bottom: 3px;
+    }
+    
+}
+
+@media only screen and (max-width:1200px){
+    .appointmentBanner{
+        height: 400px; 
+        margin-top: 3rem;
+    }
+    .appointmentBannerIcons{
+        display: flex;
+        gap:20px;
+        margin-top: 2rem;
+    }
+    
+}
+
+/* APPOINTMENT BANNER RESPONSIVE END*/
+
+.card{
+    border: none;
+    border-radius: 10px;
+    background-color: #FAFDFF;
+    box-shadow: var(--shadow2);
+    padding: 6px;
+}
+.cardImg{
+    width: 100px;
+    border-radius: 5px;
+
+}
+.card-img,.card-body{
+    width: fit-content;
+}
+.time{
+    padding: 6px;
+    font-size: var(--font-size);
+    background-color: #EFFFEC;
+    font-weight: 500;
+}
+/* BOOKING PROCESS SVG */
+.bpSvg{
+width: 300px;
+margin: auto;
+position: relative;
+z-index: 1;
+}
+.bpSvg .svg:nth-child(2)::before{
+   content: "";
+   width: 100%;
+   height: 1px;
+   z-index: -1;
+   background-color: #B6CFDD;
+   position: absolute;
+   top: 50%;
+   left: 0;
+   transform: translateY(-50%);
+}
+
+.map{
+    height: 250px;
+    padding: 6px;
+    border-radius: 5px;
+}
+/* BOOKING PROCESS RESPONSIVE */
+
+@media only screen and (max-width:1200px){
+    .bpSvg{
+        width: 200px;
+        }
+    .bpSvg .svg svg{
+        
+        width: 40px;
+        height: 40px;
+     }  
+     .booking-process h2{
+        font-size: 1.6rem;
+
+     }  
+     .booking-process p{
+        font-size: 1rem;
+
+     }  
+    
+}
+
