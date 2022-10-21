@@ -262,6 +262,9 @@
     position: relative;
 
 }
+.s4-right a{
+    margin-left: -30px;
+}
 .s4-right ul li::before{
     content: "";
     width: 30px;
