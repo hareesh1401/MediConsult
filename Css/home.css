@@ -89,7 +89,7 @@
         
     }
     .heroImg img{
-        width: 200px !important;
+        width: fit-content !important;
         height: 240px !important;
        
     }
