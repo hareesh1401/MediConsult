@@ -423,6 +423,8 @@
     .testimonial{
         min-width:fit-content!important;
         height: fit-content;
+        margin-block: 6px !important;
+        margin: auto;
     }
     .testimonial p,.testimonial-profile-wrapper{
         width: 200px;
