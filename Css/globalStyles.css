@@ -129,3 +129,6 @@ label{
 .inp-group{
     margin: 12px 0;
 }
+.error{
+    border: 1px solid rgb(160, 17, 17);
+}
