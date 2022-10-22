@@ -69,7 +69,8 @@ $(document).ready(function () {
   });
 
   // DATE 
-  $( "#datepicker" ).datepicker();
+  $( "#datepicker").datepicker();
+
 
 // SWIPER JS SPECIALISTS
 var swiper = new Swiper(".mySwiper", {
@@ -118,6 +119,6 @@ $('.stop').on('click',function(){
 
 
 // AMINATE ON SCROLL
-AOS.init();
 
+AOS.init({})
 

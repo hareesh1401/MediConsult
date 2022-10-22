@@ -372,7 +372,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: var(--primary-light);
-    background-image: url(./Assets/quotes_light.svg);
+    background-image: url(../Assets/quotes_light.svg);
     background-repeat: no-repeat;
     background-position:40px 50px;
     margin: 12px 0;
