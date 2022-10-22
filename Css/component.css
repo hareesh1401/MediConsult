@@ -274,7 +274,7 @@ img{
     border-bottom: var(--border-primary);
     border-radius: 5px;
     box-shadow: var(--shadow);
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
 }
 .card_content{
