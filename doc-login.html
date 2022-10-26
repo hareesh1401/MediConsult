@@ -13,14 +13,17 @@
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./Scripts/componentScript.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <!-- FONT AWSOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CUSTOME CSS STYLES -->
     <link rel="stylesheet" href="./Css/globalStyles.css">
     <link rel="stylesheet" href="./Css/component.css">
     <link rel="stylesheet" href="./Css/patient-register.css">
+    <!-- ANIMATE ON SCROLL  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CUSTOME JAVASCRIPT  -->
-    <script src="./Scripts/"></script>
+    <script src="./Scripts/doc-login.js" defer ></script>
 </head>
 <body>
     <!-- HEADER STARTS -->
@@ -88,23 +91,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                        <div class="registerLeft">
+                        <div class="registerLeft"  data-aos="fade-in" data-aos-duration="800">
                             <img src="./Assets/doc-register-banner.png" alt="" id="drregImg">
                            </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <div class="registerRight" id="drregRight">
-                            <form action="#" method="post">
+                            <form action="#" method="post" onsubmit="return  validateLogin()" data-aos="fade-in" data-aos-duration="800">
                             <h1 class="section-title fw-bold">Log In</h1>
                             <div class="inp-group nprefix">
                                 <label for="pnumber">Mobile Number</label> <br>
-                                <input type="text" class="dataInput" id="pnumber">
+                                <input type="text" class="dataInput" id="pnumber" onkeyup="validatePhone()">
+                                <span id="phoneError"></span>
                             </div>
                             <div class="inp-group">
                                 <label for="drpassword">Password</label> <br>
-                                <input type="password" class="dataInput" id="drpassword">
-                            </div>
-                            <a href="#" class="btn mainBtn w-100 regBtn" >Log In</a>
+                                <input type="password" class="dataInput" id="drpassword" onkeyup="validatePassword()">
+                                <span id="passwordError"></span>
+                            </div> <br>
+                            <button type="submit" class="btn mainBtn w-100 regBtn">Log In</button>
                             <p class="fw-normal mt-2">Are You A Doctor? <a href="./doc-register.html"> Register here</a></p>
                           </form>
                     </div>
