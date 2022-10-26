@@ -86,7 +86,7 @@
     <SECTION class="section_banner">
         <div class="container">
             <div class="docBanner">
-                <img src="./Assets/doctor_banner.png" alt="" class="img-fluid" data-aos="fade-in" data-aos-duration="800">
+                <img src="./Assets/doctor_banner.png" alt="" id="bannerImg" class="img-fluid" data-aos="fade-in" data-aos-duration="800">
             </div>
         </div>
     </SECTION>
@@ -348,5 +348,14 @@
         <ppy-2">© 2022. All rights reserved.</p>
     </div>
     <!-- FOOTER ENDS -->
+    <script>
+        let width = screen.width;
+        let bannerImg = document.querySelector("#bannerImg")
+        if(width<585){
+            bannerImg.src="./Assets/responsive-doctors.png"
+        }else{
+            bannerImg.src="./Assets/doctor_banner.png"
+        }
+    </script>
 </body>
 </html>

@@ -63,7 +63,12 @@
     margin: auto;
 }
 @media only screen and (max-width:576px){
-    
+    #bannerImg{
+        margin-top: 3rem;
+    }
+    #section3 h1{
+        font-size: 16px;
+    }
     .section3Img{
         width: 30%;
         height: auto;

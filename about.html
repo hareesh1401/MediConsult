@@ -86,7 +86,7 @@
     <SECTION class="section_banner">
         <div class="container">
             <div class="aboutBanner">
-                <img src="./Assets/about_banner.png" alt="" class="img-fluid" data-aos="fade-in" data-aos-duration="800">
+                <img src="./Assets/about_banner.png" alt="" id="bannerImg" class="img-fluid" data-aos="fade-in" data-aos-duration="800">
             </div>
         </div>
     </SECTION>
@@ -220,5 +220,14 @@
         <p class="mb-0 py-2">© 2022. All rights reserved.</p>
     </div>
     <!-- FOOTER ENDS -->
+    <script>
+        let width = screen.width;
+        let bannerImg = document.querySelector("#bannerImg")
+        if(width<585){
+            bannerImg.src="./Assets/responsive-about.png"
+        }else{
+            bannerImg.src="./Assets/about_banner.png"
+        }
+    </script>
 </body>
 </html>
