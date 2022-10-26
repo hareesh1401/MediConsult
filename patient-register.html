@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./Css/globalStyles.css">
     <link rel="stylesheet" href="./Css/component.css">
     <link rel="stylesheet" href="./Css/patient-register.css">
+    <!-- CUSTOME JS FILE  -->
+    <script src="./Scripts/patient-register.js" defer></script>
 </head>
 <body>
     <!-- HEADER STARTS -->
@@ -93,15 +95,17 @@
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <div class="registerRight">
-                            <form action="#" method="post">
+                            <form action="#" method="post" onsubmit="return validateRegister()">
                             <h1 class="section-title fw-bold">Register Your Self For  Booking Appointment</h1>
                             <div class="inp-group">
                                 <label for="pname">Patient's Full Name</label> <br>
-                                <input type="text" class="dataInput" id="pname">
+                                <input type="text" class="dataInput" id="pname" onkeyup="validateName()">
+                                <span id="nameError"></span>
                             </div>
                             <div class="inp-group nprefix">
                                 <label for="pnumber">Mobile Number</label> <br>
-                                <input type="text" class="dataInput" id="pnumber">
+                                <input type="text" class="dataInput" id="pnumber" onkeyup="validatePhone()">
+                                <span id="phoneError"></span>
                             </div>
                             <div class="inp-group">
                                 <label for="pgender">Gender</label>
@@ -117,9 +121,10 @@
                             </div>
                             <div class="inp-group">
                                 <label for="ppassword">Password</label> <br>
-                                <input type="password" class="dataInput" id="ppassword">
-                            </div>
-                            <a href="#" class="btn mainBtn w-100 regBtn" >Register</a>
+                                <input type="password" class="dataInput" id="ppassword" onkeyup="validatePassword()">
+                                <span id="passwordError"></span>
+                            </div><br>
+                            <button type="submit" class="btn mainBtn w-100 regBtn" >Register</button>
                             <p class="fw-normal mt-2">Already Registered ? <a href="./patient-login.html">Login here</a></p>
                           </form>
                     </div>
