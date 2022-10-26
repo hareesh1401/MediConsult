@@ -85,8 +85,8 @@
     <!-- HEADER ENDS -->
     <section id="section2">
         <div class="container">
-            <div class="section2Banner" data-aos="fade-in" data-aos-duration="800">
-                <img src="./Assets/appointment-doctor-banner.png" alt="">
+            <div class="section2Banner " data-aos="fade-in" data-aos-duration="800" >
+                <img src="./Assets/appointment-doctor-banner.png" alt="" id="bannerImg">
             </div>
         </div>
     </section>
@@ -98,7 +98,7 @@
                 <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     <div class="section3Left" data-aos="fade-right" data-aos-duration="800">
                         <div class="section3Img">
-                            <img src="./Assets/appointed-doctor.png" alt="">
+                            <img src="./Assets/appointed-doctor.png" alt="" >
                         </div>
                         <br>
                         <div class="doctorData">
@@ -238,5 +238,14 @@
         <p class="mb-0 py-2">© 2022. All rights reserved.</p>
     </div>
     <!-- FOOTER ENDS -->
+    <script>
+        let width = screen.width;
+        let bannerImg = document.querySelector("#bannerImg")
+        if(width<585){
+            bannerImg.src="./Assets/responsive appointed-doctor.png"
+        }else{
+            bannerImg.src="./Assets/appointment-doctor-banner.png"
+        }
+    </script>
 </body>
 </html>
