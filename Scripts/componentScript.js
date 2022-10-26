@@ -28,7 +28,7 @@ document.onreadystatechange = function() {
     window.addEventListener('scroll', function(e) {
       lastScrollPosition = window.scrollY;
       
-      if (lastScrollPosition > 100)
+      if (lastScrollPosition > 10)
         navbar.classList.add('navbar-light');
       else
         navbar.classList.remove('navbar-light');

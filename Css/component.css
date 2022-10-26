@@ -18,6 +18,7 @@ header{
 .navbar-light{
     background-color: var(--text-light);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.018);
+    animation: fade 0s linear;
 }
 .Navigation {
     margin-left: 180px;
@@ -591,4 +592,16 @@ img{
 
 .main{
     height: 300vh;
+}
+
+
+/* NAVIGATION ANIMATION */
+@keyframes fade {
+    0%{
+        background-color: transparent;
+    }
+    
+    100%{
+        background-color: rgb(255, 255, 255);
+    }
 }
