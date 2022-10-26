@@ -10,23 +10,28 @@
     <link rel="stylesheet" href="./Css/bootstrap.min.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- JQUERY -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./Scripts/componentScript.js" defer></script>
-    <!--JQUERY CALENDER -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <!-- FONT AWSOME -->
+   <!-- JQUERY -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js" defer ></script>
+   <!--JQUERY CALENDER -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" defer></script> 
+   <!-- FONT AWSOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ANIMATE ON SCROLL  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CUSTOME CSS STYLES -->
     <link rel="stylesheet" href="./Css/globalStyles.css">
     <link rel="stylesheet" href="./Css/component.css">
     <link rel="stylesheet" href="./Css/appointment.css">
+    <!-- CUSTOME JAVASCRIPT  -->
+    <script src="./Scripts/componentScript.js" defer></script>
 </head>
-<body>
+<body  data-aos="" data-aos-duration="">
     <!-- HEADER STARTS -->
 
-        <div class="header" data-aos="fade-down">
+        <div class="header">
             <div class="container my_row">
                 <a href="./home.html" class="logo">
                     <img src="./Assets/logo.svg" alt="" class="logoIcon">
@@ -83,16 +88,16 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
         </a>
     <!-- HEADER ENDS -->
-    <section class="banner text-center" id="appBanner">
+    <section class="banner text-center" id="appBanner" >
       <div class="container">
         <div class="appointmentBanner">
-          <h1 class="section-title">
+          <h1 class="section-title" data-aos="fade-in" data-aos-duration="800">
             FIND A DOCTOR
           </h1>
-          <P>Book appointments on the portal according to <br>
+          <P data-aos="fade-in" data-aos-duration="800">Book appointments on the portal according to <br>
             your schedule and the available timings of the doctors.
             </P>
-            <form class="selectSection">
+            <form class="selectSection"  data-aos="fade-up" data-aos-duration="800">
         
               <div class="custom-select-wrapper">
                 <div class="input-wrapper">
@@ -166,21 +171,22 @@
           </div>
             </form>
             <div class="appointmentBannerIcons">
-              <div class="appoIcon"><svg xmlns="http://www.w3.org/2000/svg" width="82" height="83" viewBox="0 0 82 83">
+              <div class="appoIcon"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="82" height="83" viewBox="0 0 82 83">
                 <g id="appoIcon1" transform="translate(-507 -436)">
                   <rect id="Rectangle_104" data-name="Rectangle 104" width="82" height="83" rx="41" transform="translate(507 436)" fill="#f6fcff"/>
                   <path id="Path_282" data-name="Path 282" d="M20.949,1.037A20.731,20.731,0,0,0,1.3,18.178a.7.7,0,0,0,1.382.26A19.33,19.33,0,1,1,25.051,40.76a.691.691,0,1,0,.26,1.339A20.7,20.7,0,0,0,22.893,1.037c-.656-.036-1.3-.023-1.944,0Zm.645,2.721a.691.691,0,0,0-.561.691V5.83a.691.691,0,1,0,1.382,0V4.449a.757.757,0,0,0-.819-.691ZM21.681,7.9a.691.691,0,0,0-.648.691V14.12a.691.691,0,0,0,1.382,0V8.594a.691.691,0,0,0-.689-.691h-.043Zm-5.872,8.938c-1.8,0-2.763,1.064-2.763,2.936v1.166h1.771V19.69c0-.835.365-1.166.951-1.166s.949.287.949,1.34c0,3.374-3.67,3.941-3.67,7.382v1.425h5.311v-1.64H14.9a1.256,1.256,0,0,1,0-.26c0-1.921,3.626-3.319,3.626-6.994,0-1.871-.915-2.936-2.719-2.936Zm6.778.13-3.324,7.945v1.64H22.8v2.115h1.814V26.555h.864V24.914h-.864V16.969h-2.03Zm.216,3.54v4.4H20.948Zm3.757.518a.694.694,0,0,0,.13,1.382h8.162a.691.691,0,1,0,0-1.382h-8.16a.691.691,0,0,0-.13,0Zm10.924,0a.694.694,0,0,0,.13,1.382h1.382a.691.691,0,1,0,0-1.382H37.613A.691.691,0,0,0,37.483,21.029ZM1.56,21.719a.691.691,0,0,0-.345.216q0,.022,0,.044a.691.691,0,0,0-.128.128q0,.022,0,.044a.691.691,0,0,0-.044.086q0,.021,0,.043A.691.691,0,0,0,1,22.453,20.343,20.343,0,0,0,20.9,42.4a.6.6,0,0,0,.735-.3q.022-.021.041-.043a.807.807,0,0,0,.044-.518v-6.52a.727.727,0,0,0-.13-.561q0-.022,0-.044h-.043q0-.021,0-.041a.617.617,0,0,0-.561-.217,7.042,7.042,0,0,1-4.275-1.209h-.043q0-.021,0-.043h-.087q0-.022,0-.044a.685.685,0,0,0-.949.3l-.043.044L14.6,35.191a14.733,14.733,0,0,1-6.3-6.3l2.03-1.078a.691.691,0,0,0,.345-.735q0-.021,0-.043a.691.691,0,0,0-.043-.087q0-.021,0-.043-.021-.022-.044-.043a.691.691,0,0,0-.041-.087q0-.021,0-.043a7.005,7.005,0,0,1-1.21-4.275.691.691,0,0,0-.774-.734H1.777a.692.692,0,0,0-.086,0,.691.691,0,0,0-.13,0ZM2.424,23.1h5.57a8.37,8.37,0,0,0,1.08,3.842l-2.03.993a.691.691,0,0,0-.173.13q-.022.02-.043.043a.691.691,0,0,0-.087.13q0,.021,0,.043a.691.691,0,0,0-.043.087q0,.021,0,.041a.691.691,0,0,0,0,.174q0,.021,0,.043a.691.691,0,0,0,0,.087q0,.021,0,.041a.691.691,0,0,0,.043.087c.006.012-.006.032,0,.044a.691.691,0,0,0,.13.173,16.117,16.117,0,0,0,7.514,7.512.691.691,0,0,0,.171.13c.012.006.032-.006.044,0a.691.691,0,0,0,.13.086h.041a.69.69,0,0,0,.087,0H14.9a.69.69,0,0,0,.087,0,.691.691,0,0,0,.087-.043h.041a.691.691,0,0,0,.174-.087h.043a.691.691,0,0,0,.13-.173q0-.021,0-.041.022-.021.043-.044l1.036-1.943a8.356,8.356,0,0,0,3.8,1.036v5.482A18.947,18.947,0,0,1,2.425,23.1Z" transform="translate(526.001 455.985)" fill="#0f5278"/>
                 </g>
               </svg>
               </div>
-              <div class="appoIcon"><svg xmlns="http://www.w3.org/2000/svg" width="83" height="83" viewBox="0 0 83 83">
+              <div class="appoIcon"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><svg xmlns="http://www.w3.org/2000/svg" width="83" height="83" viewBox="0 0 83 83">
                 <g id="appoIcon2" transform="translate(-642 -436)">
                   <rect id="Rectangle_104" data-name="Rectangle 104" width="83" height="83" rx="41.5" transform="translate(642 436)" fill="#f6fcff"/>
                   <path id="Path_277" data-name="Path 277" d="M20.672,2a3.66,3.66,0,0,0-2.358.857A3.521,3.521,0,0,0,17.3,6.4H14.07a.734.734,0,0,0-.734.734v.734h-4.4A2.943,2.943,0,0,0,6,10.8V41.614a2.943,2.943,0,0,0,2.934,2.934H32.409a2.943,2.943,0,0,0,2.934-2.934V10.8a2.943,2.943,0,0,0-2.934-2.934h-4.4V7.135a.734.734,0,0,0-.734-.734H24.042A3.521,3.521,0,0,0,23.03,2.857,3.664,3.664,0,0,0,20.672,2Zm0,1.464a2.2,2.2,0,0,1,1.906,3.3.734.734,0,0,0,.635,1.1h3.328v.613a.734.734,0,0,0,0,.241v2.694a.734.734,0,0,0,0,.241v.613H14.8v-.619a.734.734,0,0,0,0-.235v-2.7a.734.734,0,0,0,0-.235V7.869h3.328a.734.734,0,0,0,.635-1.1,2.2,2.2,0,0,1,1.906-3.3Zm0,1.467a.734.734,0,1,0,.734.734A.734.734,0,0,0,20.672,4.931ZM8.934,9.336h4.4V10.8h-2.2a2.213,2.213,0,0,0-2.2,2.2V39.413a2.213,2.213,0,0,0,2.2,2.2H30.209a2.213,2.213,0,0,0,2.2-2.2V13a2.213,2.213,0,0,0-2.2-2.2h-2.2V9.336h4.4A1.448,1.448,0,0,1,33.877,10.8V41.614a1.448,1.448,0,0,1-1.467,1.467H8.934a1.448,1.448,0,0,1-1.467-1.467V10.8A1.448,1.448,0,0,1,8.934,9.336Zm2.2,2.934h2.2V13a.734.734,0,0,0,.734.734h13.2A.734.734,0,0,0,28.008,13V12.27h2.2a.716.716,0,0,1,.734.734V39.413a.716.716,0,0,1-.734.734H11.135a.716.716,0,0,1-.734-.734V13A.716.716,0,0,1,11.135,12.27Zm1.4,4.4a.735.735,0,0,0,.073,1.467h1.445a.734.734,0,1,0,0-1.467H12.614A.734.734,0,0,0,12.539,16.672Zm4.4,0a.735.735,0,1,0,.073,1.467h7.317a.734.734,0,0,0,0-1.467H17.013a.733.733,0,0,0-.073,0Zm-4.4,4.4a.735.735,0,1,0,.073,1.467h1.445a.734.734,0,1,0,0-1.467H12.614A.734.734,0,0,0,12.539,21.073Zm4.4,0a.735.735,0,1,0,.073,1.467h7.317a.734.734,0,0,0,0-1.467H17.013a.733.733,0,0,0-.073,0Zm-4.4,4.4a.735.735,0,1,0,.073,1.467h1.445a.734.734,0,1,0,0-1.467H12.614A.733.733,0,0,0,12.539,25.475Zm4.4,0a.735.735,0,1,0,.073,1.467h7.317a.734.734,0,1,0,0-1.467H17.013a.733.733,0,0,0-.073,0Zm4.468,7.336a1.516,1.516,0,0,0-.983.4,3.6,3.6,0,0,0-.59.631,6.293,6.293,0,0,0-.534.836.734.734,0,0,0,1.3.678,5.129,5.129,0,0,1,.4-.631,2.4,2.4,0,0,1,.326-.354c.044.07.078.125.141.246a3.03,3.03,0,0,0,.4.646,1.269,1.269,0,0,0,2,0,3.109,3.109,0,0,0,.4-.647c.029-.059.04-.069.066-.116.026.047.037.059.066.116a3.03,3.03,0,0,0,.4.646,1.269,1.269,0,0,0,2,0,3.109,3.109,0,0,0,.4-.647c.065-.125.1-.18.144-.249a2.432,2.432,0,0,1,.34.361,5.049,5.049,0,0,1,.412.632.734.734,0,1,0,1.293-.69,6.58,6.58,0,0,0-.543-.836,3.632,3.632,0,0,0-.6-.628,1.522,1.522,0,0,0-.983-.393,1.343,1.343,0,0,0-.986.5,3.237,3.237,0,0,0-.384.632c-.043.082-.062.106-.1.167-.035-.06-.054-.084-.1-.167a3.311,3.311,0,0,0-.384-.632,1.224,1.224,0,0,0-1.972,0,3.237,3.237,0,0,0-.384.632c-.043.082-.062.106-.1.167-.035-.06-.054-.084-.1-.167a3.311,3.311,0,0,0-.384-.632,1.34,1.34,0,0,0-.986-.5Zm-1.53,4.4a.735.735,0,1,0,.073,1.467h8.8a.734.734,0,1,0,0-1.467h-8.8A.733.733,0,0,0,19.875,37.213Z" transform="translate(662.328 454.226)" fill="#0f5278"/>
                 </g>
               </svg>
               </div>
-              <div class="appoIcon"><svg xmlns="http://www.w3.org/2000/svg" width="82" height="83" viewBox="0 0 82 83">
+              <div class="appoIcon"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"><svg xmlns="http://www.w3.org/2000/svg" width="82" height="83" viewBox="0 0 82 83">
                 <g id="appoIcon3" transform="translate(-778 -436)">
                   <rect id="Rectangle_104" data-name="Rectangle 104" width="82" height="83" rx="41" transform="translate(778 436)" fill="#f6fcff"/>
                   <path id="Path_283" data-name="Path 283" d="M48.168,21.962l.086-.521H50.5a1.742,1.742,0,1,0,0-3.484H46.777a1.736,1.736,0,0,0-1.718,1.457L44.32,23.87a1.74,1.74,0,0,0,2.509,1.837l.053-.025a2.415,2.415,0,0,1,1.221-.237,1.292,1.292,0,1,1-1,2.107,1.742,1.742,0,1,0-2.7,2.2,4.758,4.758,0,0,0,3.7,1.762h.1a4.79,4.79,0,0,0,4.672-4.523,4.736,4.736,0,0,0-1.306-3.539,4.8,4.8,0,0,0-3.4-1.488Zm3.546,4.967a3.625,3.625,0,0,1-3.534,3.422H48.1a3.6,3.6,0,0,1-2.8-1.333.581.581,0,0,1,.9-.733,2.453,2.453,0,1,0,1.9-4,3.524,3.524,0,0,0-1.7.339c-.056.025-.091.043-.1.05a.579.579,0,0,1-.835-.613L46.2,19.6a.579.579,0,0,1,.573-.486H50.5a.581.581,0,0,1,0,1.161H47.762a.581.581,0,0,0-.573.486l-.282,1.7a.581.581,0,0,0,.618.674q.289-.022.579-.021a3.63,3.63,0,0,1,2.621,1.126A3.586,3.586,0,0,1,51.713,26.929ZM58.39,2.653H55.907V1.766A1.768,1.768,0,0,0,54.142,0h-.267a1.768,1.768,0,0,0-1.766,1.766v.888H45.361V1.766A1.768,1.768,0,0,0,43.595,0h-.267a1.768,1.768,0,0,0-1.766,1.766v.888H34.814V1.766A1.768,1.768,0,0,0,33.048,0h-.267a1.768,1.768,0,0,0-1.766,1.766v.888H28.533a2.91,2.91,0,0,0-2.907,2.907V36.736a2.906,2.906,0,0,0,2.9,2.9H58.394a2.906,2.906,0,0,0,2.9-2.9V5.561A2.91,2.91,0,0,0,58.39,2.653Zm-5.119-.888a.605.605,0,0,1,.6-.6h.267a.605.605,0,0,1,.6.6v.888H53.271Zm-10.547,0a.605.605,0,0,1,.6-.6h.267a.605.605,0,0,1,.6.6v.888H42.724Zm-10.547,0a.605.605,0,0,1,.6-.6h.267a.605.605,0,0,1,.6.6v.888H32.177Zm27.959,9.186H55.17a.581.581,0,1,0,0,1.161h4.966V36.736a1.744,1.744,0,0,1-1.742,1.742H28.529a1.744,1.744,0,0,1-1.742-1.742V12.113h26.06a.581.581,0,0,0,0-1.161H26.787V5.561a1.748,1.748,0,0,1,1.746-1.746h2.483V5.522a1.768,1.768,0,0,0,1.766,1.766.581.581,0,0,0,0-1.161.605.605,0,0,1-.6-.6V3.815h9.385V5.522a1.768,1.768,0,0,0,1.766,1.766.581.581,0,1,0,0-1.161.605.605,0,0,1-.6-.6V3.815h9.386V5.522a1.768,1.768,0,0,0,1.766,1.766.581.581,0,1,0,0-1.161.605.605,0,0,1-.6-.6V3.815H58.39a1.748,1.748,0,0,1,1.746,1.746ZM41.24,28.007,39.546,28c.463-.658,1-1.417,1.592-2.269a8.142,8.142,0,0,0,1.324-2.759c.013-.057.024-.115.031-.173l.049-.384a1.747,1.747,0,0,0,.014-.221,4.281,4.281,0,0,0-8.48-.828,1.742,1.742,0,0,0,3.419.671.8.8,0,0,1,1.574.076l-.018.142a5.019,5.019,0,0,1-.767,1.476l-.433.618a.581.581,0,0,0,.951.667l.433-.619a6.026,6.026,0,0,0,.949-1.888.584.584,0,0,0,.013-.069l.03-.236a.58.58,0,0,0,0-.1,1.958,1.958,0,0,0-3.876-.291.581.581,0,0,1-1.14-.224,3.119,3.119,0,0,1,6.179.6.586.586,0,0,1,0,.074l-.049.384a.583.583,0,0,1-.01.058,7.009,7.009,0,0,1-1.144,2.355q-1.113,1.591-2.231,3.178a.581.581,0,0,0,.473.915l2.809.009a.581.581,0,1,1,0,1.161l-5.055-.016a.581.581,0,0,1-.457-.937c.031-.041.521-.718,1.776-2.5a.581.581,0,1,0-.949-.669c-1.3,1.842-1.726,2.431-1.755,2.47a1.742,1.742,0,0,0,1.381,2.8l5.06.016a1.742,1.742,0,1,0,.005-3.484Z" transform="translate(775.374 458)" fill="#0f5278"/>
@@ -190,13 +196,13 @@
         </div>
       </div>
     </section>
-    <section id="appBodyContaiener">
+    <section id="appBodyContaiener" >
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-           <h1>Doctors List</h1> <hr>
+           <h1 data-aos="fade-in" data-aos-duration="800">Doctors List</h1> <hr data-aos="fade-in" data-aos-duration="800">
             <br><br>
-            <div class="card w-100">
+            <div class="card w-100"  data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
               <div class="row">
                 <div class="card-img">
                   <img src="./Assets/doc_ (3).png" alt="" class="cardImg">
@@ -218,7 +224,7 @@
               </div>
             </div>
             <br>
-            <div class="card w-100">
+            <div class="card w-100" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200"> 
               <div class="row">
                 <div class="card-img">
                   <img src="./Assets/doc_ (4).png" alt="" class="cardImg">
@@ -240,7 +246,7 @@
               </div>
             </div>
             <br>
-            <div class="card w-100">
+            <div class="card w-100" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" >
               <div class="row">
                 <div class="card-img">
                   <img src="./Assets/doc_ (5).png" alt="" class="cardImg">
@@ -262,7 +268,7 @@
               </div>
             </div>
             <br>
-            <div class="card w-100">
+            <div class="card w-100" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400" >
               <div class="row">
                 <div class="card-img">
                   <img src="./Assets/doc_ (6).png" alt="" class="cardImg">
@@ -284,7 +290,7 @@
               </div>
             </div>
             <br>
-            <div class="card w-100">
+            <div class="card w-100" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500" >
               <div class="row">
                 <div class="card-img">
                   <img src="./Assets/doc_ (2).png" alt="" class="cardImg">
@@ -306,7 +312,7 @@
               </div>
             </div>
             <br>
-            <div class="card w-100">
+            <div class="card w-100" data-aos="fade-right" data-aos-duration="800" data-aos-delay="600" >
               <div class="row">
                 <div class="card-img">
                   <img src="./Assets/doc_ (1).png" alt="" class="cardImg">
@@ -329,7 +335,7 @@
             </div>
             <br>
 
-            <div class="card w-100">
+            <div class="card w-100" data-aos="fade-right" data-aos-duration="800" data-aos-delay="700" >
               <div class="row">
                 <div class="card-img">
                   <img src="./Assets/doc_ (8).png" alt="" class="cardImg">
@@ -353,12 +359,12 @@
             <br>
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-4">
-            <h1>Location</h1> <hr><br><br>
-            <div class="card w-100 overflow-hidden">
+            <h1 data-aos="fade-in" data-aos-duration="800">Location</h1> <hr data-aos="fade-in" data-aos-duration="800"><br><br>
+            <div class="card w-100 overflow-hidden" data-aos="fade-up" data-aos-duration="800">
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15766.653332973468!2d76.58349845!3d8.910857199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1665996551280!5m2!1sen!2sin" class="w-100 map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <br><br>
-            <div class="card w-100 booking-process">
+            <div class="card w-100 booking-process" data-aos="fade-up" data-aos-duration="800">
               <h2 class="card-title text-center fw-bold mt-5">Booking Process</h2>
               <p class="card-text text-center">
                 You can manage various doctors and their availability <br> 
@@ -406,7 +412,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
     </section>
@@ -504,5 +510,15 @@
         <p class="mb-0 py-2">© 2022. All rights reserved.</p>
     </div>
     <!-- FOOTER ENDS -->
+  
+      
+      <script>
+        // DATE
+    
+        $(document).ready(function(){
+          $("#datepicker").datepicker();
+        })
+        
+        </script>
 </body>
 </html>

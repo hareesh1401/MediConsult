@@ -13,12 +13,17 @@
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./Scripts/componentScript.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer ></script>
+    <!-- ANIMATE ON SCROLL  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />    
     <!-- FONT AWSOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CUSTOME CSS STYLES -->
     <link rel="stylesheet" href="./Css/globalStyles.css">
     <link rel="stylesheet" href="./Css/component.css">
     <link rel="stylesheet" href="./Css/contact.css">
+    <!-- CUSTOME JS AND JQUERY  -->
+    <script src="./Scripts/contact.js" defer></script>
 </head>
 <body>
     <!-- HEADER STARTS -->
@@ -85,8 +90,8 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="contactImage">
-                        <img src="./Assets/contact-banner.png" alt="">
-                        <div class="contact-content">
+                        <img src="./Assets/contact-banner.png" alt="" data-aos="fade-in" data-aos-duration="800">
+                        <div class="contact-content" data-aos="fade-up" data-aos-duration="800">
                             <h2 class="fw-bold">How Can I Help You?</h2>
                             <span>mediconsult@gmil.com</span>
                             <span class="contactNo">+91 984 690 12 34</span>
@@ -95,22 +100,26 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6">
 
-                    <form action="" method="post" class="contact-form">
+                    <form action="" method="post" class="contact-form" name="Cform" id="Cform" onsubmit="return validateContact()">
                         <div class="contact-data">
-                            <h1 class="section-title fw-bold">Contact us</h1>
-                            <div class="inp-group">
+                            <h1 class="section-title fw-bold" data-aos="fade-up" data-aos-duration="800">Contact us</h1>
+                            <div class="inp-group"  data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">
                                 <label for="Cname">Full Name *</label><br>
-                                <input type="text" name="Cname" id="Cname" class="dataInput" onkeyup="validateName(this)">
+                                <input type="text" name="Cname" id="Cname" class="dataInput" onkeyup="validateName()">
+                                <span id="nameError"></span>
                             </div>
-                            <div class="inp-group">
+                            <div class="inp-group"  data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
                                 <label for="Cmail">E mail *</label><br>
-                                <input type="text" name="Cmail" id="Cmail" class="dataInput">
+                                <input type="text" name="Cmail" id="Cmail" class="dataInput" onkeyup="validateEmail()">
+                                <span id="emailError"></span>
                             </div>
-                            <div class="inp-group">
+                            <div class="inp-group"  data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
                                 <label for="Cmessage">Messege *</label> <br>
-                                <textarea name="Cmessege" id="" cols="30" rows="5" class="dataInput"></textarea>
+                                <textarea name="Cmessege" id="Cmessege" cols="30" rows="5" class="dataInput" onkeyup="validateMessege()"></textarea>
+                                <span id="messegeError"></span>
                             </div>
-                            <input type="submit" class="btn mainBtn w-100">
+                            <br>
+                            <input type="submit" class="btn mainBtn w-100" id="Csubmit" data-aos="fade-up" data-aos-duration="800" >
                         </div>
                     </form>
                 </div>

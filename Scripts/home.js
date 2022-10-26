@@ -21,6 +21,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // OWL CAROSUAL TESTIMONIAL
 var owl = $('.owl-carousel');
+
 owl.owlCarousel({
     items:2,
     loop:true,

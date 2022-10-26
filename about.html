@@ -13,8 +13,11 @@
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./Scripts/componentScript.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <!-- FONT AWSOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ANIMATE ON SCROLL  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CUSTOME CSS STYLES -->
     <link rel="stylesheet" href="./Css/globalStyles.css">
     <link rel="stylesheet" href="./Css/component.css">
@@ -83,7 +86,7 @@
     <SECTION class="section_banner">
         <div class="container">
             <div class="aboutBanner">
-                <img src="./Assets/about_banner.png" alt="" class="img-fluid">
+                <img src="./Assets/about_banner.png" alt="" class="img-fluid" data-aos="fade-in" data-aos-duration="800">
             </div>
         </div>
     </SECTION>
@@ -91,7 +94,7 @@
         <div class="container">
             <div class="row about_order">
                 <div class="col-sm-12 col-md-6 col-lg-6 text-right aboutSection_text">
-                    <div class="w-75 ">
+                    <div class="w-75 " data-aos="fade-right" data-aos-duration="800">
                         <h1 class="section-title">Why Choose Us?</h1>
                         <p>
                         Medi-Consult is a platform where patients apply their appointments online without waiting in a large queue. Patients can choose their doctors according to their needs. After applying appointment and successful payment patient can download pdf that contains details about the patients appointment which is necessary for the consultancy.
@@ -99,7 +102,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6">
-                    <div class="about_image m-auto">
+                    <div class="about_image m-auto" data-aos="fade-left" data-aos-duration="800">
                         <img src="./Assets/about_Image2.png" alt="">
                     </div>
                 </div>
@@ -110,12 +113,12 @@
         <div class="container">
             <div class="row about_order2">
                 <div class="col-sm-12 col-md-6 col-lg-6">
-                    <div class="about_image m-auto">
+                    <div class="about_image m-auto" data-aos="fade-right" data-aos-duration="800">
                         <img src="./Assets/about_Image3.png" alt="">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 aboutSection_text2">
-                    <div class="w-75">
+                    <div class="w-75" data-aos="fade-left" data-aos-duration="800">
                         <h1 class="section-title">What Is Our Mission ?</h1>
                         <p>
                             Online Doctor Appointment Booking System provides patients or any user can make an easy way of booking a doctor’s appointment online. It overcomes the issue of managing and booking appointments according to the user’s choice or demands. In this system, patients can book appointments on the portal according to their schedule and the available timings of the doctors. Through this system, doctors can easily manage appointment slots online. The system makes it easy to manage various doctors and their availability on various dates and times.

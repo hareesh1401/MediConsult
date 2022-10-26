@@ -125,10 +125,29 @@ label{
     font-size: var(--font-size);
     color: var(--primary-clr);
     font-weight: 500;
+    border: 1px solid rgb(255, 255, 255);
 }
 .inp-group{
     margin: 12px 0;
+    position: relative;
+}
+.inp-group span{
+    position: absolute;
+    bottom: -20px;
+    right:2px;
+    color: rgb(160, 17, 17);
 }
 .error{
     border: 1px solid rgb(160, 17, 17);
+}
+.fa-circle-xmark{
+    color:  rgb(160, 17, 17) ;
+    font-size: var(--font-size);
+}
+.success{
+    border: 1px solid rgb(17, 160, 34);
+}
+.fa-circle-check{
+    color: rgb(17, 160, 34) ;
+    font-size: var(--font-size);
 }

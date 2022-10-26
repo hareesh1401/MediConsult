@@ -74,13 +74,10 @@ $(document).ready(function () {
 
 
 // AMINATE ON SCROLL
+$(function() {
+  AOS.init();
+});
 
-AOS.init({})
 
-// NAME VALIDATION
 
-function validateName(e){
-  let name = e.value;
-  name.classList.add('error')
-  console.log(name)
-}
+
