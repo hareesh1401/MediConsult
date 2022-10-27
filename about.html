@@ -221,13 +221,23 @@
     </div>
     <!-- FOOTER ENDS -->
     <script>
-        let width = screen.width;
-        let bannerImg = document.querySelector("#bannerImg")
-        if(width<585){
-            bannerImg.src="./Assets/responsive-about.png"
-        }else{
-            bannerImg.src="./Assets/about_banner.png"
+ 
+        let resizebanner= ()=> {
+            let width = window.outerWidth;
+            let bannerImg = document.querySelector("#bannerImg")
+            let responsiveImg="./Assets/responsive-about.png";
+            let normalImg="./Assets/about_banner.png"
+            if(width<585){
+                bannerImg.src=responsiveImg
+            }else{
+                bannerImg.src=normalImg;
+            }
         }
+
+        window.addEventListener("load",resizebanner)
+        window.addEventListener("resize",resizebanner)
+        
+
     </script>
 </body>
 </html>
