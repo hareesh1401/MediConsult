@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags --> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>MediConsult || Admin</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.2/js/bootstrap.min.js" integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./Css/feather.css">
+  <link rel="stylesheet" href="./Css/admin.css">
+  <!-- <link rel="shortcut icon" href="images/favicon.png" /> -->
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="./Assets/logo_light.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="./Assets/logo_light.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="search">                  
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Search Doctors.." aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+            
+          <li class="nav-item dropdown d-flex">
+            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-normal">David Grey
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    The meeting is cancelled
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    New product launch
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    Upcoming board meeting
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown d-flex mr-4 ">
+            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Settings</p>
+              <a class="dropdown-item preview-item">               
+                  <i class="icon-head"></i> Profile
+              </a>
+              <a class="dropdown-item preview-item">
+                  <i class="icon-inbox"></i> Logout
+              </a>
+            </div>
+          </li>
+          </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas position-fixed" id="sidebar">
+        <div class="user-profile">
+          <div class="user-image">
+            <img src="./Assets/doc_ (6).png">
+          </div>
+          <div class="user-name">
+             Dr. Shani Shashidharan
+          </div>
+          <div class="user-designation">
+              MBBS
+          </div>
+        </div>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./admin.html">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            
+              >
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="./admin-request.html">
+              <!-- <i class="icon-file menu-icon"></i> -->
+              
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="8.5" cy="7" r="4" />
+                    <line x1="20" y1="8" x2="20" y2="14" />
+                    <line x1="23" y1="11" x2="17" y2="11" />
+                    </svg>
+            <span class="menu-title">Requests</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/chartjs.html">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              <span class="menu-title">Doctors</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/tables/basic-table.html">
+                <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" />
+              </svg>
+              <span class="menu-title">Tables</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/feather-icons.html">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+              <span class="menu-title">Reviews</span>
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="doc-logout.php">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18.36 6.64a9 9 0 1 1-12.73 0" />
+                <line x1="12" y1="2" x2="12" y2="12" />
+              </svg>
+              <span class="menu-title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+          <div class="content-wrapper">
+              <div class="banner">
+                  <img src="./Assets/about_banner.png" class="w-100" alt="">
+                  <h5 class="font-weight-bolder text-black my-5">DOCTORS</h5>
+            </div>
+          <div class="row">
+           <div class="col-sm-12 col-md-3 col-lg-2 mb-5">
+            <div class="card h-100 border-0  rounded py-lg-5  d-flex flex-column align-items-center justify-content-center p-md-3 py-sm-5 p-3 b-bottom">
+                <h1 class="font-weight-bold text-center text-black">15</h1>
+                <h6 class="font-weight-bold text-center text-nowrap">REQUESTS</h6>
+            </div>
+           </div>
+           <div class="col-sm-12 col-md-3 col-lg-2 mb-5">
+            <div class="card h-100 border-0  rounded py-lg-5 d-flex flex-column align-items-center justify-content-center  p-md-3 py-sm-5 p-3 b-bottom">
+                <h1 class="font-weight-bold text-center text-black">472</h1>
+                <h6 class="font-weight-bold text-center text-nowrap">CONSULTED</h6>
+            </div>
+           </div>
+           <div class="col-sm-12 col-md-3 col-lg-2 mb-5">
+            <div class="card h-100 border-0  rounded py-lg-5 d-flex flex-column align-items-center justify-content-center  p-md-3 py-sm-5 p-3 b-bottom">
+                <h1 class="font-weight-bold text-center text-black">300</h1>
+                <h6 class="font-weight-bold text-center text-nowrap">DOCTORS</h6>
+            </div>
+           </div>
+           <div class="col-sm-12 col-md-3 col-lg-6 mb-5">
+            <div class="card h-100 border-0  rounded p-md-3 py-sm-5 p-3 b-bottom">
+                <h6 class="font-weight-bold text-nowrap text-black">Notifications</h6>
+                <div class="w-100 p-3 d-flex flex-sm-column flex-lg-row">
+                    <i class="fa-regular fa-bell p-3 font-weight-bold bg-success text-white rounded-circle align-items-center justify-content-center m-sm-auto m-lg-0"></i>
+                    <div class="notification ml-3">
+                        <h6 class="font-weight-bold text-black"> There are new Notifications</h6>
+                        <span class="font-weight-medium"> Your Profile Need to be Updated</span>
+                    </div>
+                </div>
+                
+            </div>
+           </div>
+           
+          </div>
+          <h5 class="font-weight-bolder text-black my-3">BOOKINGS</h5>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-xl-6 h-100">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-xl-6 mb-4">
+                        <div class="card h-100 border-0  rounded py-lg-5  d-flex flex-column align-items-center justify-content-center p-md-3 py-sm-5 p-3 b-bottom">
+                            <h1 class="font-weight-bold text-center text-black">78</h1>
+                            <h6 class="font-weight-bold text-center text-nowrap">NEW BOOKINGS</h6>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-6 mb-4">
+                        <div class="card h-100 border-0  rounded py-lg-5  d-flex flex-column align-items-center justify-content-center p-md-3 py-sm-5 p-3 b-bottom">
+                            <h1 class="font-weight-bold text-center text-black">500</h1>
+                            <h6 class="font-weight-bold text-center text-nowrap">TOTAL BOOKINGS</h6>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="card h-100 border-0  rounded p-md-3 py-sm-5 p-3 b-bottom">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="font-weight-bold text-nowrap text-black">Reviews</h6>
+                                <a class="font-weight-bold text-nowrap light-primary ">View all</a>
+
+                            </div>
+                            <div class="w-100 p-3 d-flex flex-sm-column flex-lg-row">
+                                <i class="fa-regular fa-user p-3 font-weight-bold bg-secondary text-white rounded-circle align-items-center justify-content-center m-sm-auto m-lg-0"></i>
+                                <div class="notification ml-3">
+                                    <h6 class="font-weight-bold text-black"> Hareesh Krishanan</h6>
+                                    <span class="font-weight-medium"> Dr. Shani Shashidharan is good ...</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                       </div>
+                </div>
+                
+            </div>
+            <div class="col-sm-12 col-md-6 col-xl-6 h-100">
+               <div class="card border-0 rounded b-bottom">
+                <div class="d-flex align-items-center justify-content-between px-3 pt-3">
+                    <div>
+                        <h6 class="font-weight-bold text-nowrap text-black">New Requests</h6>
+                        <span class="text-black-50 text-small"> You have new Requests</span>
+                    </div>
+                    <a class="font-weight-bold text-nowrap light-primary">View all</a>
+                </div>
+                   <div class="container">
+                       <table class="table table-borderless text-black w-100">
+                          
+                        <tr>
+                            <th><i class="fa-solid fa-user-group text-primary light-primary"></i></th>
+                            <th>Dr. Sathya Krishana</th>
+                            <th>9841223041</th>
+                            <th><i class="fa-solid fa-user-check text-success light-primary"></i></th>
+                            <th><i class="fa-solid fa-trash-can light-primary text-danger"></i></th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa-solid fa-user-group text-primary light-primary"></i></th>
+                            <th>Dr. Sathya Krishana</th>
+                            <th>9841223041</th>
+                            <th><i class="fa-solid fa-user-check text-success light-primary"></i></th>
+                            <th><i class="fa-solid fa-trash-can light-primary text-danger"></i></th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa-solid fa-user-group text-primary light-primary"></i></th>
+                            <th>Dr. Sathya Krishana</th>
+                            <th>9841223041</th>
+                            <th><i class="fa-solid fa-user-check text-success light-primary"></i></th>
+                            <th><i class="fa-solid fa-trash-can light-primary text-danger"></i></th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa-solid fa-user-group text-primary light-primary"></i></th>
+                            <th>Dr. Sathya Krishana</th>
+                            <th>9841223041</th>
+                            <th><i class="fa-solid fa-user-check text-success light-primary"></i></th>
+                            <th><i class="fa-solid fa-trash-can light-primary text-danger"></i></th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa-solid fa-user-group text-primary light-primary"></i></th>
+                            <th>Dr. Sathya Krishana</th>
+                            <th>9841223041</th>
+                            <th><i class="fa-solid fa-user-check text-success light-primary"></i></th>
+                            <th><i class="fa-solid fa-trash-can light-primary text-danger"></i></th>
+                        </tr>
+                        
+                   
+                           
+                       </table>
+                   
+                   
+                   </div>
+               </div>
+          </div>
+          
+        </div>
+        
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <script src="./Scripts/vendor.bundle.base.js"></script>
+  <script src="./Scripts/off-canvas.js"></script>
+  <script src="./Scripts/template.js"></script>
+
+</body>
+
+</html>
+
